@@ -6,12 +6,20 @@ import { AppComponent } from './app.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductItemComponent } from './components/product-list/product-item/product-item.component';
+import { NavbarComponent } from './layout/navbar/navbar.component';
+import { CartComponent } from './components/cart/cart.component';
+import { ProductDetailsComponent } from './components/product-list/product-details/product-details.component';
+import { ConfirmationComponent } from './components/confirmation/confirmation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
-    ProductItemComponent
+    ProductItemComponent,
+    NavbarComponent,
+    CartComponent,
+    ProductDetailsComponent,
+    ConfirmationComponent
   ],
   imports: [
     BrowserModule,
