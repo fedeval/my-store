@@ -28,6 +28,10 @@ export class AddToCartComponent implements OnInit {
   }
 
   ngDoCheck(): void {
+    /* Needed to render available amounts correctly in the form within the product details
+    page. Since the product-details ngOnInit executes asynchronous operations using Observables,
+    it ends execution after the add-to-cart ngOnInit, hence the availableAmounts will
+    always be [] if we don't execute a check. */
     if (this.availableAmounts.length !== this.productItem.availableAmount) {
       this.availableAmounts = [...Array(this.productItem.availableAmount).keys()].map(i => i + 1)
     }
