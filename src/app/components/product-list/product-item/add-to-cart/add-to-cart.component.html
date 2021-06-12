@@ -1,9 +1,9 @@
-<form (ngSubmit)="addToCart(productItem)" #form="ngForm">
-  <div class="form-group amount-selector">
-    <select class="form-select form-control" style="width: 110px;" aria-label="Default select" name="selectedAmount" [(ngModel)]="selectedAmount">
-      <option selected>Amount</option>
-      <option *ngFor="let number of availableAmounts" value="{{ number }}">{{ number }}</option>
-    </select>
-  </div>
-  <button type="submit" class="btn btn-primary">Add to Cart</button>
+<form class="amount-selector" (ngSubmit)="addToCart(productItem)" #form="ngForm">
+
+  <select class="form-control"  name="selectedAmount" [(ngModel)]="selectedAmount">
+    <option value="0" disabled selected><p>Amount</p></option>
+    <option *ngFor="let number of availableAmounts" value="{{ number }}">{{ number }}</option>
+  </select>
+
+  <button type="submit" class="btn btn-danger" [disabled]="selectedAmount < 1">Add to Cart</button>
 </form>
