@@ -2,15 +2,7 @@
   <img src="{{ productItem.url }}" alt="{{ productItem.name }}">
   <h2>{{ productItem.name }}</h2>
   <p>{{ productItem.price }}</p>
-  <p *ngIf="path == '/cart'">{{ productItem.selectedAmount }}</p>
+  <p *ngIf="path == '/cart'">Amount: {{ productItem.selectedAmount }}</p>
   <button *ngIf="path == '/cart'" class="btn btn-primary" (click)="removeFromCart(productItem)">Remove</button>
-  
-  <form *ngIf="path == '/'" (ngSubmit)="addToCart(productItem)" #form="ngForm">
-    <select class="form-select" name="selectedAmount" [(ngModel)]="selectedAmount">
-      <option selected>Amount</option>
-      <option *ngFor="let number of availableAmounts" value="{{ number }}">{{ number }}</option>
-    </select>
-    <button  type="submit" class="btn btn-primary">Add to Cart</button>
-  </form>
-
+  <app-add-to-cart *ngIf="path == '/'" [productItem]="productItem"></app-add-to-cart>
 </div>

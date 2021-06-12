@@ -12,6 +12,7 @@ import { ProductDetailsComponent } from './components/product-list/product-detai
 import { ConfirmationComponent } from './components/confirmation/confirmation.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
+import { AddToCartComponent } from './components/product-list/product-item/add-to-cart/add-to-cart.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     CartComponent,
     ProductDetailsComponent,
-    ConfirmationComponent
+    ConfirmationComponent,
+    AddToCartComponent
   ],
   imports: [
     BrowserModule,
