@@ -19,8 +19,7 @@ export class ProductItemComponent implements OnInit {
       price: 0,
       url: '',
       description: '',
-      availableAmount: 0,
-      selectedAmount: 0
+      availableAmount: 0
     }
     this.path = router.url
   }

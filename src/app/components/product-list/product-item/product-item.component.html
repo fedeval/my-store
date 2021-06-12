@@ -1,5 +1,7 @@
 <div class="product-item">
-  <img src="{{ productItem.url }}" alt="{{ productItem.name }}">
+  <a routerLink="products/{{ productItem.id }}" routerLinkActive="router-link-active">
+    <img src="{{ productItem.url }}" alt="{{ productItem.name }}">
+  </a>
   <h2>{{ productItem.name }}</h2>
   <p>{{ productItem.price }}</p>
   <p *ngIf="path == '/cart'">Amount: {{ productItem.selectedAmount }}</p>

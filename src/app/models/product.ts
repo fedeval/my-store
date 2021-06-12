@@ -5,5 +5,5 @@ export interface Product {
   url: string,
   description: string,
   availableAmount: number,
-  selectedAmount: number
+  selectedAmount?: number
 }

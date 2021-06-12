@@ -27,6 +27,12 @@ export class AddToCartComponent implements OnInit {
     this.availableAmounts = [...Array(this.productItem.availableAmount).keys()].map(i => i + 1)
   }
 
+  ngDoCheck(): void {
+    if (this.availableAmounts.length !== this.productItem.availableAmount) {
+      this.availableAmounts = [...Array(this.productItem.availableAmount).keys()].map(i => i + 1)
+    }
+  }
+
   addToCart(productItem: Product): void {
     this.productItem.selectedAmount = this.selectedAmount
     this.cartService.addToCart(productItem)
