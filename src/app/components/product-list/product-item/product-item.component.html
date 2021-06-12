@@ -2,4 +2,5 @@
   <img src="{{ productItem.url }}" alt="{{ productItem.name }}">
   <h2>{{ productItem.name }}</h2>
   <p>{{ productItem.price }}</p>
+  <button class="btn btn-primary" (click)="addToCart(productItem)">Add to Cart</button>
 </div>

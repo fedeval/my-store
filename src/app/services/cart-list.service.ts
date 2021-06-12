@@ -17,8 +17,9 @@ export class CartListService {
     this.cartList.push(product)
   }
 
-  removeFromCart(product: Product): void {
+  removeFromCart(product: Product): Product[] {
     this.cartList = this.cartList.filter(p => p.id !== product.id)
+    return this.cartList
   }
 
   clearCart(): Product[] {
