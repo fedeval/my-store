@@ -4,5 +4,6 @@ export interface Product {
   price: number,
   url: string,
   description: string,
-  amount: number
+  availableAmount: number,
+  selectedAmount: number
 }
