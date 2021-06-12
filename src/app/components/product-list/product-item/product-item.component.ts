@@ -12,18 +12,21 @@ export class ProductItemComponent implements OnInit {
   @Input() productItem: Product
   @Output() removeProduct: EventEmitter<Product> = new EventEmitter
   path: string
+  availableAmounts: number[] = []
 
   constructor(private cartService: CartListService, private router: Router) {
     this.productItem = {
       name: '',
       price: 0,
       url: '',
-      description: '' 
+      description: '',
+      amount: 0
     }
     this.path = router.url
   }
 
   ngOnInit(): void {
+    this.availableAmounts = [...Array(this.productItem.amount).keys()].map(i => i+1)
   }
 
   addToCart(productItem: Product): void {
