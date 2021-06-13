@@ -7,7 +7,7 @@
     <app-cart-item *ngFor="let item of cartList" [cartItem]="item" (removeItem)="removeItem($event)"></app-cart-item>
   </div>
   <div class="checkout-form">
-    <p *ngIf="totalPrice > 0"><strong>Order Price: {{ totalPrice | currency: 'EUR' }}</strong></p>
+    <p *ngIf="totalPrice > 0"><strong>Order Total: {{ totalPrice | currency: 'EUR' }}</strong></p>
     <app-checkout></app-checkout>
   </div>
 </div>
