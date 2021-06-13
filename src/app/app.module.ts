@@ -39,4 +39,4 @@ import { CartItemComponent } from './components/cart/cart-item/cart-item.compone
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

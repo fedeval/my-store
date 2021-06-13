@@ -7,8 +7,8 @@ import { Product } from 'src/app/models/product';
   styleUrls: ['./cart-item.component.css']
 })
 export class CartItemComponent implements OnInit {
-  @Input() cartItem: Product
-  @Output() removeItem: EventEmitter<Product> = new EventEmitter
+  @Input() cartItem: Product;
+  @Output() removeItem: EventEmitter<Product> = new EventEmitter();
 
   constructor() {
     this.cartItem = {
@@ -18,13 +18,12 @@ export class CartItemComponent implements OnInit {
       description: '',
       availableAmount: 0,
       selectedAmount: 0
-    }
+    };
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   removeFromCart(cartItem: Product): void {
-    this.removeItem.emit(cartItem)
+    this.removeItem.emit(cartItem);
   }
 }

@@ -9,10 +9,9 @@ describe('CheckoutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CheckoutComponent ],
-      imports: [ RouterTestingModule, FormsModule ]
-    })
-    .compileComponents();
+      declarations: [CheckoutComponent],
+      imports: [RouterTestingModule, FormsModule]
+    }).compileComponents();
   });
 
   beforeEach(() => {

@@ -9,19 +9,21 @@ import { Product } from 'src/app/models/product';
   styleUrls: ['./confirmation.component.css']
 })
 export class ConfirmationComponent implements OnInit {
-  fullName: string = ''
-  address: string = ''
-  cartList: Product[] = []
-  totalPrice: number = 0
+  fullName = '';
+  address = '';
+  cartList: Product[] = [];
+  totalPrice = 0;
 
-  constructor(private route: ActivatedRoute, private cartService: CartListService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private cartService: CartListService
+  ) {}
 
   ngOnInit(): void {
-    this.fullName = this.route.snapshot.paramMap.get('fullName')!;
-    this.address = this.route.snapshot.paramMap.get('address')!;
-    this.cartList = this.cartService.getCart()
-    this.totalPrice = this.cartService.getTotalPrice()
-    this.cartService.clearCart()
+    this.fullName = this.route.snapshot.paramMap.get('fullName') as string;
+    this.address = this.route.snapshot.paramMap.get('address') as string;
+    this.cartList = this.cartService.getCart();
+    this.totalPrice = this.cartService.getTotalPrice();
+    this.cartService.clearCart();
   }
-
 }
