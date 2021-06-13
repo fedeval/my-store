@@ -1,10 +1,10 @@
 <div class="product-item">
-  <a routerLink="products/{{ productItem.id }}" routerLinkActive="router-link-active">
+  <a routerLink="/products/{{ productItem.id }}" routerLinkActive="router-link-active">
     <img src="{{ productItem.url }}" alt="{{ productItem.name }}">
   </a>
   <h2>{{ productItem.name }}</h2>
   <p>{{ productItem.price | currency :'EUR'}}</p>
   <p *ngIf="path == '/cart'">Amount: {{ productItem.selectedAmount }}</p>
   <button *ngIf="path == '/cart'" class="btn btn-primary" (click)="removeFromCart(productItem)">Remove</button>
-  <app-add-to-cart *ngIf="path == '/'" [productItem]="productItem"></app-add-to-cart>
+  <app-add-to-cart *ngIf="path == '/products'" [productItem]="productItem"></app-add-to-cart>
 </div>

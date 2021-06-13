@@ -40,7 +40,7 @@ export class AddToCartComponent implements OnInit {
   addToCart(productItem: Product): void {
     this.productItem.selectedAmount = this.selectedAmount
     this.cartService.addToCart(productItem)
-    alert(`${this.selectedAmount} of ${this.productItem.name} added to the cart!`)
+    alert(`${this.productItem.name} added to the cart!\nAmount: ${this.selectedAmount}`)
   }
 
 }
