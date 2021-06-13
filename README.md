@@ -17,7 +17,11 @@ npm install
 
 ### Development server ###
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. If you wish the dev server to listen on a different port run `ng serve --port PORT_NUMBER`
+```
+ng serve
+```
+
+will run the app on a dev server listening by default on port `4200`. Navigate to `http://localhost:4200/` to see the app and interact with it. The app will automatically reload if you change any of the source files. If you wish the dev server to listen on a different port run `ng serve --port PORT_NUMBER`
 
 ### Scripts ###
 
