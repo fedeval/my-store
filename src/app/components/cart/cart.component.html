@@ -1,4 +1,13 @@
 <div class="cart-container">
-  <app-cart-item *ngFor="let item of cartList" [cartItem]="item" (removeItem)="removeItem($event)"></app-cart-item>
-  <app-checkout></app-checkout>
+  <div class="cart-empty" *ngIf="cartList.length === 0">
+    <h2 >Cart is empty!</h2>
+    <a routerLink="/products">← Back to Products</a>
+  </div>
+  <div class="cart-list">
+    <app-cart-item *ngFor="let item of cartList" [cartItem]="item" (removeItem)="removeItem($event)"></app-cart-item>
+  </div>
+  <div class="checkout-form">
+    <p *ngIf="totalPrice > 0"><strong>Order Price: {{ totalPrice | currency: 'EUR' }}</strong></p>
+    <app-checkout></app-checkout>
+  </div>
 </div>

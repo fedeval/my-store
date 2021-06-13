@@ -2,5 +2,15 @@
   display: flex;
   margin: 0 auto;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+}
+
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.cart-empty {
+  margin-right: 20px;
 }
