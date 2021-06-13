@@ -5,7 +5,7 @@
 This is an app simulating an e-commerce front-end where users can add products to a cart, see product information pages, edit cart details and fill in a checkout form. The app is build with Angular 12.
 
 ---
-## Getting Started ##
+## How to use ##
 
 ### Installing dependencies ###
 
