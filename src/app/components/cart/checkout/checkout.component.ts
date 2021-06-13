@@ -7,17 +7,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent implements OnInit {
-  fullName: string = ''
-  address: string = ''
-  cardNumber: string = ''
+  fullName = '';
+  address = '';
+  cardNumber = '';
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onSubmit(): void {
-    this.router.navigate(['confirmation', { fullName: this.fullName, address: this.address }])
+    this.router.navigate([
+      'confirmation',
+      { fullName: this.fullName, address: this.address }
+    ]);
   }
-
 }

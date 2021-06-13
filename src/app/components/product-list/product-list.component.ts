@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../../models/product';
-import { ProductService } from '../../services/product.service'
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-product-list',
@@ -8,16 +8,15 @@ import { ProductService } from '../../services/product.service'
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  productList: Product[] = []
+  productList: Product[] = [];
 
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
-    this.productService.getProducts().subscribe(data => {
-      return this.productList = data.map(product => {
-        return {...product, selectedAmount: 0}
-      })
-    })
+    this.productService.getProducts().subscribe((data) => {
+      return (this.productList = data.map((product) => {
+        return { ...product, selectedAmount: 0 };
+      }));
+    });
   }
-
 }

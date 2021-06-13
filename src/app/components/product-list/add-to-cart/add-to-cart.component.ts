@@ -8,9 +8,9 @@ import { Product } from 'src/app/models/product';
   styleUrls: ['./add-to-cart.component.css']
 })
 export class AddToCartComponent implements OnInit {
-  @Input() productItem: Product
-  selectedAmount: number = 0
-  availableAmounts: number[] = []
+  @Input() productItem: Product;
+  selectedAmount = 0;
+  availableAmounts: number[] = [];
 
   constructor(private cartService: CartListService) {
     this.productItem = {
@@ -20,11 +20,13 @@ export class AddToCartComponent implements OnInit {
       description: '',
       availableAmount: 0,
       selectedAmount: 0
-    }
+    };
   }
 
   ngOnInit(): void {
-    this.availableAmounts = [...Array(this.productItem.availableAmount).keys()].map(i => i + 1)
+    this.availableAmounts = [
+      ...Array(this.productItem.availableAmount).keys()
+    ].map((i) => i + 1);
   }
 
   ngDoCheck(): void {
@@ -33,14 +35,17 @@ export class AddToCartComponent implements OnInit {
     it ends execution after the add-to-cart ngOnInit, hence the availableAmounts will
     always be [] if we don't execute a check. */
     if (this.availableAmounts.length !== this.productItem.availableAmount) {
-      this.availableAmounts = [...Array(this.productItem.availableAmount).keys()].map(i => i + 1)
+      this.availableAmounts = [
+        ...Array(this.productItem.availableAmount).keys()
+      ].map((i) => i + 1);
     }
   }
 
   addToCart(productItem: Product): void {
-    this.productItem.selectedAmount = this.selectedAmount
-    this.cartService.addToCart(productItem)
-    alert(`${this.productItem.name} added to the cart!\nAmount: ${this.selectedAmount}`)
+    this.productItem.selectedAmount = this.selectedAmount;
+    this.cartService.addToCart(productItem);
+    alert(
+      `${this.productItem.name} added to the cart!\nAmount: ${this.selectedAmount}`
+    );
   }
-
 }

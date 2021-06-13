@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Product } from '../../../models/product';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-item',
@@ -8,9 +8,9 @@ import { Router } from '@angular/router'
   styleUrls: ['./product-item.component.css']
 })
 export class ProductItemComponent implements OnInit {
-  @Input() productItem: Product
-  path: string
-  selectedAmount: number = 0
+  @Input() productItem: Product;
+  path: string;
+  selectedAmount = 0;
 
   constructor(private router: Router) {
     this.productItem = {
@@ -19,10 +19,9 @@ export class ProductItemComponent implements OnInit {
       url: '',
       description: '',
       availableAmount: 0
-    }
-    this.path = router.url
+    };
+    this.path = router.url;
   }
 
-  ngOnInit(): void {   
-  }
+  ngOnInit(): void {}
 }
