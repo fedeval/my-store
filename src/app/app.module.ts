@@ -14,6 +14,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { AddToCartComponent } from './components/product-list/add-to-cart/add-to-cart.component';
 import { CheckoutComponent } from './components/cart/checkout/checkout.component';
+import { CartItemComponent } from './components/cart/cart-item/cart-item.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CheckoutComponent } from './components/cart/checkout/checkout.component
     ProductDetailsComponent,
     ConfirmationComponent,
     AddToCartComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    CartItemComponent
   ],
   imports: [
     BrowserModule,

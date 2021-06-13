@@ -16,7 +16,7 @@ export class CartComponent implements OnInit {
     this.cartList = this.cartService.getCart()
   }
 
-  removeProduct(product: Product): void {
+  removeItem(product: Product): void {
     this.cartList = this.cartService.removeFromCart(product)
   }
 

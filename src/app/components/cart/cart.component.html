@@ -1,4 +1,4 @@
 <div class="cart-container">
-  <app-product-item *ngFor="let product of cartList" [productItem]="product" (removeProduct)="removeProduct($event)"></app-product-item>
+  <app-cart-item *ngFor="let item of cartList" [cartItem]="item" (removeItem)="removeItem($event)"></app-cart-item>
   <app-checkout></app-checkout>
 </div>

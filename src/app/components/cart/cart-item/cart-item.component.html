@@ -1,0 +1,7 @@
+<a routerLink="/products/{{ cartItem.id }}">
+  <img src="{{ cartItem.url }}" alt="{{ cartItem.name }}">
+</a>
+<h2>{{ cartItem.name }}</h2>
+<p>{{ cartItem.price | currency :'EUR'}}</p>
+<p>Amount: {{ cartItem.selectedAmount }}</p>
+<button class="btn btn-danger" (click)="removeFromCart(cartItem)">Remove</button>

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Product } from '../../../models/product';
 import { Router } from '@angular/router'
 
@@ -9,7 +9,6 @@ import { Router } from '@angular/router'
 })
 export class ProductItemComponent implements OnInit {
   @Input() productItem: Product
-  @Output() removeProduct: EventEmitter<Product> = new EventEmitter
   path: string
   selectedAmount: number = 0
 
@@ -24,12 +23,6 @@ export class ProductItemComponent implements OnInit {
     this.path = router.url
   }
 
-  ngOnInit(): void {
-    
+  ngOnInit(): void {   
   }
-
-  removeFromCart(productItem: Product): void {
-    this.removeProduct.emit(productItem)
-  }
-
 }
