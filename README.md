@@ -1,26 +1,60 @@
-# MyStore
+# MyStore - Udacity Fullstack JS Nanodegree
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.3.
+## Introduction ##
 
-## Development server
+This is an app simulating an e-commerce front-end where users can add products to a cart, see product information pages, edit cart details and fill in a checkout form. The app is build with Angular 12.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+---
+## Getting Started ##
 
-## Code scaffolding
+### Installing dependencies ###
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+After cloning the repo, all the project dependencies can be installed using npm:
 
-## Build
+```
+npm install
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Development server ###
 
-## Running unit tests
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. If you wish the dev server to listen on a different port run `ng serve --port PORT_NUMBER`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Scripts ###
 
-## Running end-to-end tests
+The following actions can be executed through npm or ng scripts:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+#### Build ####
+
+```
+ng build
+```
+
+to build the project. The build artifacts will be stored in the `dist/` directory.
+
+#### Running unit tests ####
+
+```
+ng test
+```
+
+to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+#### Formatting ####
+
+The code can be automatically formatted using prettier. The formatting options can be customised by editing the `.prettierrc`file.
+
+```
+npm run prettier
+```
+
+#### Linting ####
+
+The code can ba automatically linted using ESlint. Note that ESlint will also use prettier to test for incorrect formatting. Rules, plugins and extensions for ESlint can be modified through the `.eslintrc` file.
+
+```
+npm run lint
+```
+---
 
 ## Further help
 
