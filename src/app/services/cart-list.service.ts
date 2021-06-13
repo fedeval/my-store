@@ -26,4 +26,10 @@ export class CartListService {
     this.cartList = []
     return this.cartList
   }
+
+  getTotalPrice(): number {
+    return this.cartList.reduce((acc, cval) => {
+      return acc + (cval.price * cval.selectedAmount!)
+    }, 0)
+  }
 }

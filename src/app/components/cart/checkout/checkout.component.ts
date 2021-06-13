@@ -17,7 +17,7 @@ export class CheckoutComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.router.navigate(['confirmation'])
+    this.router.navigate(['confirmation', { fullName: this.fullName, address: this.address }])
   }
 
 }

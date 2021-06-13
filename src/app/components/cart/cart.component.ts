@@ -15,14 +15,12 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     this.cartList = this.cartService.getCart()
-    this.totalPrice = this.cartList.reduce((acc,cval) => {
-      return acc + (cval.price * cval.selectedAmount!)
-    }, 0)
+    this.totalPrice = this.cartService.getTotalPrice()
   }
 
   removeItem(product: Product): void {
     this.cartList = this.cartService.removeFromCart(product)
-    this.totalPrice -= product.price * product.selectedAmount!
+    this.totalPrice = this.cartService.getTotalPrice()
   }
 
 }
